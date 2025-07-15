@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | .Store</title>
     <link rel="stylesheet" href="style sheet/style.css">
     <link rel="stylesheet" href="style sheet/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:ital,wght@0,300;0,400;0,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <title>.Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <div id="page" class="site page-category">
+    <div id="page" class="site page-account">
         <!-- side -->
         <aside class="site-off desktop-hide">
             <div class="off-canvas">
@@ -412,151 +412,113 @@
                 </div>
             </div>
         </header>
-        <!-- main.......... -->
+        <!-- Main Content -->
         <main>
-            
-            <div class="single-cart">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="breadcrumb">
-                            <ul class="flex-item">
-                                <li><a href="#">Home</a></li>
-                                <li>Cart</li>
-                            </ul>
+            <div class="container account-page">
+                <ul class="breadcrumb flex-item mini-text">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Account Overview</li>
+                </ul>
+                <div class="account-wrapper">
+                    <aside class="account-sidebar">
+                        <div class="account-profile flex-col">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                            <h2>John Doe</h2>
+                            <span class="mini-text">john.doe@email.com</span>
+                            <a href="settings.html" class="secondary-button mini-edit-btn"><i class="fa-solid fa-pen"></i> Edit Profile</a>
                         </div>
-                        <div class="page-title">
-                            <h1>Shopping Cart</h1>
-                        </div><div class="products one cart">
-                            <div class="flex-wrap">
-                                <form action="" class="form-cart">
-                                    <div class="item">
-                                        <table id="cart-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Item</th>
-                                                    <th>Price</th>
-                                                    <th>Qty</th>
-                                                    <th>Subtotal</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="flex-item">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="images/products/home2.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Celling Light Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>$279</td>
-                                                    <td>
-                                                        <div class="qty-control flex-item">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>$559.99</td>
-                                                    <td><a href="#" class="item-remove"><i class="fa-regular fa-circle-xmark"></i></a></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
+                        <nav class="account-nav">
+                            <ul class="flex-col">
+                                <li><a href="profile.html" class="primary-button"><i class="fa-solid fa-user mr-2"></i> Account Overview</a></li>
+                                <li><a href="my-orders.html" class="light-button"><i class="fa-solid fa-box mr-2"></i> My Orders</a></li>
+                                <li><a href="wish-list.html" class="light-button"><i class="fa-solid fa-heart mr-2"></i> Wishlist</a></li>
+                                <li><a href="settings.html" class="light-button"><i class="fa-solid fa-gear mr-2"></i> Settings</a></li>
+                                <li><a href="#" class="light-button" style="color:var(--primary-color);"><i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Logout</a></li>
+                            </ul>
+                        </nav>
+                        <div class="account-alert">
+                            <i class="fa-solid fa-bell"></i> You have <strong>1</strong> pending order.
+                        </div>
+                    </aside>
+                    <section class="account-main">
+                        <div class="account-section dashboard">
+                            <h2>Welcome back, John!</h2>
+                            <div class="flex-wrap" style="gap:2em;">
+                                <!-- Quick Stats -->
+                                <div class="account-stats flex-item" style="gap:2em;">
+                                    <div class="stat-card" style="background:var(--light-bg-color);padding:1.5em 2em;border-radius:10px;min-width:150px;text-align:center;">
+                                        <i class="fa-solid fa-box text-2xl" style="color:var(--secondary-color);font-size:2em;"></i>
+                                        <div style="font-size:2em;font-weight:700;margin:0.5em 0;">5</div>
+                                        <div class="mini-text">Orders</div>
                                     </div>
-                                </form>
-                                <div class="cart-summary styled">
-                                    <div class="item">
-                                        <div class="coupon">
-                                            <input type="text" placeholder="Enter Coupon">
-                                            <button>Apply</button>
-                                        </div>
-                                        <div class="shipping-rate collapse">
-                                            <div class="has-child expend">
-                                                <a href="#" class="icon-small">Estimate Shipping an Tax</a>
-                                                <div class="content">
-                                                    <div class="countries">
-                                                        <form action="">
-                                                            <label for="country">Country</label>
-                                                            <select name="country" id="country">
-                                                                <option value=""></option>
-                                                                <option value="1">Egypt</option>
-                                                                <option value="2">Qatar</option>
-                                                                <option value="3">Espanol</option>
-                                                                <option value="4" selected="selected">United States</option>
-                                                                <option value="5" >Others</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="states">
-                                                        <form action="">
-                                                            <label for="states">States/province</label>
-                                                            <select name="states" id="states">
-                                                                <option value="">selected a region, state or province</option>
-                                                                <option value="1">Alaska</option>
-                                                                <option value="2">Alabama</option>
-                                                                <option value="3">Arizona</option>
-                                                                <option value="4">American samoa</option>
-                                                                <option value="5" >Others</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="postal-code">
-                                                        <form action="">
-                                                            <label for="postal">Zip/Postal Code</label>
-                                                            <input type="number" name="postal" id="postal">
-                                                        </form>
-                                                    </div>
-                                                    <div class="rate-option variant">
-                                                        <form action="">
-                                                            <p>
-                                                                <span>Flat : $10.00</span>
-                                                                <input type="radio" name="rate-option" id="flat" checked>
-                                                                <label for="flat" class="circle"></label>
-                                                            </p>
-                                                            <p>
-                                                                <span>Best : $0.00</span>
-                                                                <input type="radio" name="rate-option" id="best" >
-                                                                <label for="best" class="circle"></label>
-                                                            </p>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cart-total">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>subtotal</th>
-                                                        <td>$2155.98</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Discount</th>
-                                                        <td>$100.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Shipping <span class="mini-text">(flat)</span></th>
-                                                        <td>$10</td>
-                                                    </tr>
-                                                    <tr class="grand-total">
-                                                        <th>TOTAL</th>
-                                                        <td><strong>$2065.98</strong></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <a href="checkout.html" class="secondary-button">Checkout</a>
-                                        </div>
+                                    <div class="stat-card" style="background:var(--light-bg-color);padding:1.5em 2em;border-radius:10px;min-width:150px;text-align:center;">
+                                        <i class="fa-solid fa-heart text-2xl" style="color:var(--primary-color);font-size:2em;"></i>
+                                        <div style="font-size:2em;font-weight:700;margin:0.5em 0;">8</div>
+                                        <div class="mini-text">Wishlist</div>
+                                    </div>
+                                    <div class="stat-card" style="background:var(--light-bg-color);padding:1.5em 2em;border-radius:10px;min-width:150px;text-align:center;">
+                                        <i class="fa-solid fa-star text-2xl" style="color:#f1c40e;font-size:2em;"></i>
+                                        <div style="font-size:2em;font-weight:700;margin:0.5em 0;">3</div>
+                                        <div class="mini-text">Reviews</div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="dashboard-cards">
+                                <div class="dashboard-card recent-orders">
+                                    <h3>Recent Orders</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Order #</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#1001</td>
+                                                <td>2025-07-10</td>
+                                                <td><span class="status delivered">Delivered</span></td>
+                                                <td>$120.00</td>
+                                                <td><a href="order-details.html" class="primary-button mini">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#1000</td>
+                                                <td>2025-06-28</td>
+                                                <td><span class="status pending">Pending</span></td>
+                                                <td>$89.99</td>
+                                                <td><a href="order-details.html" class="secondary-button mini">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#0999</td>
+                                                <td>2025-06-15</td>
+                                                <td><span class="status cancelled">Cancelled</span></td>
+                                                <td>$45.00</td>
+                                                <td><a href="order-details.html" class="light-button mini">View</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="table-footer">
+                                        <a href="my-orders.html" class="view-all">View All Orders <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card notifications">
+                                    <h3>Notifications</h3>
+                                    <ul>
+                                        <li><i class="fa-solid fa-circle-info"></i> Your last order has been delivered.</li>
+                                        <li><i class="fa-solid fa-gift"></i> You have 2 unused coupons.</li>
+                                        <li><i class="fa-solid fa-star"></i> Don't forget to review your last purchase!</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </main>
+        <!-- Footer -->
         <!-- footer -->
         <footer>
             <div class="newsletter">
@@ -723,57 +685,9 @@
         </div>
         <div class="overlay"></div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="main.js"></script>
-    <script>
-        let infoProductCart = document.querySelector('#cart-table tbody')
-        
-
-
-function drawProductUI(allItems = []) {
-    
-    let productInCart = JSON.parse(localStorage.getItem("productsItem")) || allItems;
-    let Products = productInCart.map((item) => {
-        return `
-        <tr>
-            <td class="flex-item">
-                <div class="thumbnail object-cover">
-                    <a href="#"><img src="${item.imgSrc}" alt=""></a>
-                </div>
-                <div class="content">
-                    <strong><a href="#">${item.title}</a></strong>
-                    
-                </div>
-            </td>
-            <td>${item.price}</td>
-            <td>
-                <div class="qty-control flex-item">
-                    <button  class="minus">-</button>
-                    <input type="text" value="1" min="1">
-                    <button  class="plus">+</button>
-                </div>
-            </td>
-            <td>${item.price}</td>
-            <td><a href="#0" onclick="removeProduct(${item.id})" class="item-remove"><i class="fa-regular fa-circle-xmark"></i></a></td>
-        </tr>
-            `;
-        }).join("")
-        infoProductCart.innerHTML = Products
-    }
-    drawProductUI()
-
-    function removeProduct(id) {
-        if (localStorage.getItem("productsItem")) {
-        let items = JSON.parse(localStorage.getItem("productsItem"));
-        let filtered = items.filter((item) => item.id !== id) ;
-        localStorage.setItem("productsItem" , JSON.stringify(filtered));
-        drawProductUI(filtered)
-        showProducts()
-    }
-    }
-
-    </script> 
+    <script src="profile.js"></script>
 </body>
 </html>

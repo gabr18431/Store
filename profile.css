@@ -1,0 +1,588 @@
+.dpt-menu {
+    /* display: none; */
+    border-radius: 0 0 7px 7px;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+/* Profile & Account Pages Custom Styles */
+
+.container.account-page {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.account-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.account-sidebar {
+    flex: 1 0 250px;
+    max-width: 280px;
+}
+
+.account-profile {
+    align-items: center;
+    gap: 1em;
+    padding: 2em 1em;
+    background: var(--light-bg-color);
+    border-radius: 12px;
+}
+
+.account-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+}
+
+.account-profile h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.account-profile .mini-text {
+    color: var(--light-text-color);
+}
+
+.account-nav {
+    margin-top: 2em;
+}
+
+.account-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.account-nav a {
+    width: 100%;
+    text-align: left;
+}
+
+.account-main {
+    flex: 3 1 500px;
+    min-width: 300px;
+}
+
+.account-section {
+    background: var(--whit-color);
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+.account-section h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.account-stats {
+    display: flex;
+    gap: 2em;
+}
+
+.stat-card {
+    background: var(--light-bg-color);
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.stat-card i {
+    font-size: 2em;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.account-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.account-section th, .account-section td {
+    padding: 0.75em;
+}
+
+.account-section thead tr {
+    background: var(--light-bg-color);
+}
+
+.order-bottom-row {
+    display: flex;
+    gap: 2em;
+    align-items: flex-end;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+.order-notes {
+    background: var(--light-bg-color);
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    flex: 2 1 320px;
+    min-width: 220px;
+    font-size: 1.08em;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+.order-notes strong {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3em;
+}
+.order-notes-text {
+    margin: 0.5em 0 0 0;
+}
+.order-summary {
+    flex: 1 1 220px;
+    min-width: 180px;
+    max-width: 320px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: right;
+    font-size: 1.08em;
+    font-weight: 500;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+.order-summary div {
+    margin-bottom: 0.3em;
+}
+.order-summary .order-total {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 0.5em;
+}
+.order-summary .print-btn {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.order-info {
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-info > div {
+    min-width: 220px;
+}
+
+.account-section .breadcrumb {
+    margin-bottom: 1.5em;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) forwards;
+    animation-delay: 0.2s;
+}
+
+.settings-form input,
+.settings-form select {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.settings-form input:hover,
+.settings-form select:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    outline: none;
+}
+
+.settings-form label {
+    transition: color 0.2s;
+}
+
+.settings-form input:focus + label,
+.settings-form select:focus + label {
+    color: var(--primary-color);
+}
+
+.settings-form .primary-button {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.settings-form .primary-button:hover {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 900px) {
+    .account-wrapper {
+        flex-direction: column;
+    }
+    .account-sidebar, .account-main {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .order-bottom-row {
+        flex-direction: column;
+        gap: 1.2em;
+    }
+    .order-summary {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.dashboard-stats {
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.dashboard-stats .stat-card {
+    flex: 1 1 120px;
+    min-width: 120px;
+    background: var(--light-bg-color);
+    border-radius: 12px;
+    padding: 1.2em 1em;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.dashboard-stats .stat-card:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+.dashboard-stats .stat-card i {
+    font-size: 2.1em;
+    margin-bottom: 0.3em;
+    display: block;
+}
+.dashboard-stats .stat-value {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0.3em 0;
+}
+
+.dashboard-quicklinks {
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+.quicklink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-bg-color);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    font-size: 1em;
+}
+.quicklink .icon {
+    font-size: 1.7em;
+    margin-bottom: 0.2em;
+}
+.quicklink:hover {
+    background: var(--secondary-color);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.dashboard-card {
+    background: var(--light-bg-color);
+    border-radius: 12px;
+    padding: 1.5em 1.2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    flex: 1 1 300px;
+    min-width: 260px;
+    margin-bottom: 1em;
+}
+.dashboard-card h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.dashboard-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+.dashboard-card ul li {
+    margin-bottom: 0.7em;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.dashboard-card.notifications ul li i {
+    color: var(--primary-color);
+}
+.dashboard-card.account-info ul li strong {
+    min-width: 90px;
+    display: inline-block;
+}
+.dashboard-card .mini {
+    font-size: 0.9em;
+    padding: 0.3em 1em;
+}
+.dashboard-card .table-footer {
+    text-align: right;
+    margin-top: 0.7em;
+}
+.dashboard-card .view-all {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.98em;
+}
+.dashboard-card .view-all i {
+    margin-left: 0.3em;
+}
+
+.dashboard-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98em;
+}
+.dashboard-card th, .dashboard-card td {
+    padding: 0.7em 0.5em;
+    text-align: left;
+}
+.dashboard-card thead tr {
+    background: #f7f7fa;
+}
+.status {
+    padding: 0.2em 0.8em;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: 600;
+    display: inline-block;
+}
+.status.delivered {
+    background: #eafaf1;
+    color: #10ac84;
+}
+.status.pending {
+    background: #fffbe6;
+    color: #f1c40e;
+}
+.status.cancelled {
+    background: #fff0f0;
+    color: #ff6b6b;
+}
+
+.account-alert {
+    background: #fffbe6;
+    color: #f1c40e;
+    border-radius: 8px;
+    padding: 0.7em 1em;
+    margin-top: 2em;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.secondary-button.mini, .primary-button.mini, .light-button.mini {
+    font-size: 0.92em;
+    padding: 0.3em 1.1em;
+    border-radius: 6px;
+}
+.mini-edit-btn {
+    margin-top: 1em;
+    font-size: 0.95em;
+    padding: 0.4em 1.2em;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-cards {
+        flex-direction: column;
+        gap: 1.2em;
+    }
+}
+@media (max-width: 900px) {
+    .dashboard-stats, .dashboard-quicklinks {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+    }
+    .dashboard-stats .stat-card, .quicklink {
+        width: 100%;
+        border-radius: 12px;
+        height: auto;
+    }
+}
+
+.dashboard-card.notifications {
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.order-product-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.order-card {
+    background: var(--light-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 1.2em 1.5em;
+    margin-top: 2em;
+    font-size: 1.08em;
+    font-weight: 400;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+.order-card strong {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3em;
+}
+@media (max-width: 900px) {
+    .order-card {
+        max-width: 100%;
+    }
+}
+
+/* Animation for dashboard cards on load */
+.dashboard-card, .stat-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) forwards;
+}
+.dashboard-card { animation-delay: 0.2s; }
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.stat-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hover effect for stat cards and dashboard cards */
+.stat-card, .dashboard-card {
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.stat-card:hover, .dashboard-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    transform: translateY(-6px) scale(1.03);
+}
+
+
+/* Sidebar nav selected and hover */
+.account-nav a {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+}
+.account-nav a.active, .account-nav a:focus, .account-nav a:hover {
+    background: var(--secondary-color);
+    color: #fff !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.account-nav a.active::before, .account-nav a:focus::before, .account-nav a:hover::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--primary-color);
+    border-radius: 4px 0 0 4px;
+    z-index: 2;
+}
+
+/* Button hover gradient */
+.primary-button, .secondary-button, .light-button {
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.primary-button:hover {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.secondary-button:hover {
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.light-button:hover {
+    background: #f7f7fa;
+    color: var(--primary-color);
+}
+
+/* Table row hover */
+.dashboard-card table tbody tr:hover, .orders-table tbody tr:hover {
+    background: #f7f7fa;
+    transition: background 0.2s;
+}
+
+/* Quicklink hover animation */
+.quicklink {
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.quicklink:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: scale(1.08) rotate(-2deg);
+} 

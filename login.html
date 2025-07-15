@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style sheet/style.css">
+    <link rel="stylesheet" href="style sheet/login.css">
     <link rel="stylesheet" href="style sheet/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -413,149 +414,54 @@
             </div>
         </header>
         <!-- main.......... -->
-        <main>
-            
-            <div class="single-cart">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="breadcrumb">
-                            <ul class="flex-item">
-                                <li><a href="#">Home</a></li>
-                                <li>Cart</li>
-                            </ul>
+        <main class="login-main">
+            <div class="wrapper">
+                <div class="title-text">
+                    <div class="title login">Login Form</div>
+                    <div class="title signup">Signup Form</div>
+                </div>
+                <div class="form-container">
+                    <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slider-tab"></div>
+                    </div>
+                    <div class="form-inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                        <input type="text" placeholder="Email Address" required>
                         </div>
-                        <div class="page-title">
-                            <h1>Shopping Cart</h1>
-                        </div><div class="products one cart">
-                            <div class="flex-wrap">
-                                <form action="" class="form-cart">
-                                    <div class="item">
-                                        <table id="cart-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Item</th>
-                                                    <th>Price</th>
-                                                    <th>Qty</th>
-                                                    <th>Subtotal</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="flex-item">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="images/products/home2.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Celling Light Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>$279</td>
-                                                    <td>
-                                                        <div class="qty-control flex-item">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>$559.99</td>
-                                                    <td><a href="#" class="item-remove"><i class="fa-regular fa-circle-xmark"></i></a></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </form>
-                                <div class="cart-summary styled">
-                                    <div class="item">
-                                        <div class="coupon">
-                                            <input type="text" placeholder="Enter Coupon">
-                                            <button>Apply</button>
-                                        </div>
-                                        <div class="shipping-rate collapse">
-                                            <div class="has-child expend">
-                                                <a href="#" class="icon-small">Estimate Shipping an Tax</a>
-                                                <div class="content">
-                                                    <div class="countries">
-                                                        <form action="">
-                                                            <label for="country">Country</label>
-                                                            <select name="country" id="country">
-                                                                <option value=""></option>
-                                                                <option value="1">Egypt</option>
-                                                                <option value="2">Qatar</option>
-                                                                <option value="3">Espanol</option>
-                                                                <option value="4" selected="selected">United States</option>
-                                                                <option value="5" >Others</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="states">
-                                                        <form action="">
-                                                            <label for="states">States/province</label>
-                                                            <select name="states" id="states">
-                                                                <option value="">selected a region, state or province</option>
-                                                                <option value="1">Alaska</option>
-                                                                <option value="2">Alabama</option>
-                                                                <option value="3">Arizona</option>
-                                                                <option value="4">American samoa</option>
-                                                                <option value="5" >Others</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="postal-code">
-                                                        <form action="">
-                                                            <label for="postal">Zip/Postal Code</label>
-                                                            <input type="number" name="postal" id="postal">
-                                                        </form>
-                                                    </div>
-                                                    <div class="rate-option variant">
-                                                        <form action="">
-                                                            <p>
-                                                                <span>Flat : $10.00</span>
-                                                                <input type="radio" name="rate-option" id="flat" checked>
-                                                                <label for="flat" class="circle"></label>
-                                                            </p>
-                                                            <p>
-                                                                <span>Best : $0.00</span>
-                                                                <input type="radio" name="rate-option" id="best" >
-                                                                <label for="best" class="circle"></label>
-                                                            </p>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cart-total">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>subtotal</th>
-                                                        <td>$2155.98</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Discount</th>
-                                                        <td>$100.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Shipping <span class="mini-text">(flat)</span></th>
-                                                        <td>$10</td>
-                                                    </tr>
-                                                    <tr class="grand-total">
-                                                        <th>TOTAL</th>
-                                                        <td><strong>$2065.98</strong></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <a href="checkout.html" class="secondary-button">Checkout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="field">
+                        <input type="password" placeholder="Password" required>
                         </div>
+                        <div class="pass-link"><a href="#">Forgot password?</a></div>
+                        <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login">
+                        </div>
+                        <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+                    </form>
+                    <form action="#" class="signup">
+                        <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                        <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                        </div>
+                        <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
+
         </main>
         <!-- footer -->
         <footer>
@@ -728,52 +634,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="main.js"></script>
     <script>
-        let infoProductCart = document.querySelector('#cart-table tbody')
-        
+            const loginText = document.querySelector(".title-text .login");
+            const loginForm = document.querySelector("form.login");
+            const loginBtn = document.querySelector("label.login");
+            const signupBtn = document.querySelector("label.signup");
+            const signupLink = document.querySelector("form .signup-link a");
+            signupBtn.onclick = (()=>{
+                loginForm.style.marginLeft = "-50%";
+                loginText.style.marginLeft = "-50%";
+            });
+            loginBtn.onclick = (()=>{
+                loginForm.style.marginLeft = "0%";
+                loginText.style.marginLeft = "0%";
+            });
+            signupLink.onclick = (()=>{
+                signupBtn.click();
+                return false;
+            });
 
-
-function drawProductUI(allItems = []) {
-    
-    let productInCart = JSON.parse(localStorage.getItem("productsItem")) || allItems;
-    let Products = productInCart.map((item) => {
-        return `
-        <tr>
-            <td class="flex-item">
-                <div class="thumbnail object-cover">
-                    <a href="#"><img src="${item.imgSrc}" alt=""></a>
-                </div>
-                <div class="content">
-                    <strong><a href="#">${item.title}</a></strong>
-                    
-                </div>
-            </td>
-            <td>${item.price}</td>
-            <td>
-                <div class="qty-control flex-item">
-                    <button  class="minus">-</button>
-                    <input type="text" value="1" min="1">
-                    <button  class="plus">+</button>
-                </div>
-            </td>
-            <td>${item.price}</td>
-            <td><a href="#0" onclick="removeProduct(${item.id})" class="item-remove"><i class="fa-regular fa-circle-xmark"></i></a></td>
-        </tr>
-            `;
-        }).join("")
-        infoProductCart.innerHTML = Products
-    }
-    drawProductUI()
-
-    function removeProduct(id) {
-        if (localStorage.getItem("productsItem")) {
-        let items = JSON.parse(localStorage.getItem("productsItem"));
-        let filtered = items.filter((item) => item.id !== id) ;
-        localStorage.setItem("productsItem" , JSON.stringify(filtered));
-        drawProductUI(filtered)
-        showProducts()
-    }
-    }
-
-    </script> 
+    </script>
 </body>
 </html>
